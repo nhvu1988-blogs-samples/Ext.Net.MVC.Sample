@@ -8,7 +8,6 @@ namespace Ext.Net.MVC.Sample
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
-        }
+		}
     }
 }
