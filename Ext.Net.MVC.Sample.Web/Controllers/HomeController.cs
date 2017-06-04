@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Ext.Net.MVC.Sample.Controllers
+namespace Ext.Net.MVC.Sample.Web.Controllers
 {
 	public class HomeController : Controller
 	{

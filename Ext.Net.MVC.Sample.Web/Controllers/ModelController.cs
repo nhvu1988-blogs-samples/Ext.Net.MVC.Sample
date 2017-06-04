@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using AutoMapper;
-using Ext.Net.MVC.Sample.Models.User;
 using Ext.Net.MVC.Sample.Services;
+using Ext.Net.MVC.Sample.Web.Models;
 
-namespace Ext.Net.MVC.Sample.Controllers
+namespace Ext.Net.MVC.Sample.Web.Controllers
 {
     public class ModelController : Controller
     {

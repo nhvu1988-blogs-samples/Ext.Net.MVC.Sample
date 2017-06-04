@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Ext.Net.MVC.Sample.Domain;
-using Ext.Net.MVC.Sample.Models.User;
+using Ext.Net.MVC.Sample.Web.Models;
 
-namespace Ext.Net.MVC.Sample.Mappers
+namespace Ext.Net.MVC.Sample.Web.Mappers
 {
 	public class UserMapper : Profile
 	{

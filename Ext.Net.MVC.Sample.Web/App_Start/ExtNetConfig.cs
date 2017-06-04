@@ -1,9 +1,10 @@
 using System.Web.Mvc;
 using System.Web.Routing;
- 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Ext.Net.MVC.Sample.ExtNetConfig), "Start")]
+using Ext.Net.MVC.Sample.Web;
 
-namespace Ext.Net.MVC.Sample 
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ExtNetConfig), "Start")]
+
+namespace Ext.Net.MVC.Sample.Web
 {
     public static class ExtNetConfig 
     {

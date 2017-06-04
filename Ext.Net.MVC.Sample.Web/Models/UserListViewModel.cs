@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ext.Net.MVC.Sample.Models.User
+namespace Ext.Net.MVC.Sample.Web.Models
 {
 	public class UserListViewModel
 	{

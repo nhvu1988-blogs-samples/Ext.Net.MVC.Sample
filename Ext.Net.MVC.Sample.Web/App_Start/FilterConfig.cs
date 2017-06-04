@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Ext.Net.MVC.Sample
+namespace Ext.Net.MVC.Sample.Web
 {
 	public class FilterConfig
 	{

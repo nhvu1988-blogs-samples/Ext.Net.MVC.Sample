@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using AutoMapper;
 
-namespace Ext.Net.MVC.Sample
+namespace Ext.Net.MVC.Sample.Web
 {
 	public class MapperConfig
 	{
