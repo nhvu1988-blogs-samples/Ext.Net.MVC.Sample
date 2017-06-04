@@ -13,5 +13,20 @@ namespace Ext.Net.MVC.Sample.Web.Controllers
 		{
 			return View();
 		}
+
+		public ActionResult Border()
+		{
+			return View();
+		}
+
+		public ActionResult Column()
+		{
+			return View();
+		}
+
+	    public ActionResult Anchor()
+	    {
+		    return View();
+	    }
 	}
 }

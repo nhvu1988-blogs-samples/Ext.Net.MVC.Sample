@@ -1,20 +1,23 @@
-﻿@{
-	Layout = "../Shared/_LayoutAbsolute.cshtml";
-	var X = Html.X();
-}
+﻿@{var X = Html.X();}
 
 @section content
 {
 	@(
-		X.Panel().Title("Absolute View").Frame(true)
-			.Width(500)
-			.Height(500)
-			.X(50)
-			.Y(50)
-			.Loader(X.ComponentLoader()
-				.Url("http://www.ext.net")
-				.Mode(LoadMode.Frame)
-				.LoadMask(lm => lm.ShowMask = true)
-			)
+		X.Panel().Frame(true)
+			.Title("Parent View")
+			.Layout(LayoutType.Absolute)
+			.Items(
+				X.Panel().Frame(true)
+					.Title("Absolute View")
+					.Width(500)
+					.Height(500)
+					.X(50)
+					.Y(50)
+					.Loader(X.ComponentLoader()
+						.Url("http://www.ext.net")
+						.Mode(LoadMode.Frame)
+						.LoadMask(lm => lm.ShowMask = true)
+					)
+		)
 	)
 }

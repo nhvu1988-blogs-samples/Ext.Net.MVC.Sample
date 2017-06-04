@@ -5,7 +5,7 @@
 @section content
 {
 	@(
-		X.FormPanel().DefaultAnchor("100%").Frame(true)
+		X.FormPanel().DefaultAnchor("100%").Frame(true).Padding(10)
 			.Items(
 				X.DisplayFieldFor(model => model.Id),
 				X.TextFieldFor(model => model.Fullname),

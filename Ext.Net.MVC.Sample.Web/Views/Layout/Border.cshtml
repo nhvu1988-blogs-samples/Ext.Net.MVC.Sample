@@ -1,0 +1,46 @@
+﻿@{var X = Html.X();}
+
+@section content
+{
+	@(X.Panel().Frame(true)
+		  //.Title("Parent View")
+		  .Layout(LayoutType.Border)
+		  .Items(
+			  X.Panel().Collapsible(true).Frame(true)
+				   .Title("Center Region")
+				   .Html("Center Region contains main content page" +
+			  		"<br> - Center View is special region that will auto fill to fit the body with other regions")
+				   //.Loader(X.ComponentLoader()
+				   //		.Url(Url.Action("GridPanelFor", "Model"))
+				   //		.Mode(LoadMode.Frame)
+				   //		.LoadMask(lm => lm.ShowMask = true)
+				   //	)
+				   .Region(Region.Center),
+			  X.Panel().Collapsible(true)
+				  .Title("West Region")
+				  .Html("West Region often contains navigation bar or menu bar" +
+						"<br> - This region is set max width to 200px")
+				  .MaxWidth(200)
+				  .Region(Region.West),
+			  X.Panel().Collapsible(true)
+				  .Title("East Region")
+				  .Html("East Region" +
+						"<br> - We can setup width or height for each region without breaking others" +
+						"<br> - This region is auto fit width to its content")
+				  .Region(Region.East),
+			  X.Panel().Collapsible(true)
+				  .Title("North Region")
+				  .Html("North Region often contains page-header-items such as" +
+						"<br> - Branch Image" +
+						"<br> - Menu" +
+						"<br> - Account Login" +
+						"<br> This region is auto fit height with its content")
+				  .Region(Region.North),
+			  X.Panel().Collapsible(true)
+				  .Title("South Region")
+				  .Height(200)
+				  .Html("South Region often contains page-header-items" +
+						"<br> - This region is set height to 200px")
+				  .Region(Region.South)
+		  ))
+}

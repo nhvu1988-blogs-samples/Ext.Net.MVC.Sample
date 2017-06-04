@@ -216,7 +216,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_LayoutFit.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Model\GridPanelFor.cshtml" />
     <Content Include="Views\Model\FormPanelFor.cshtml" />
@@ -250,7 +250,13 @@
     <Content Include="Views\Layout\Fit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_LayoutAbsolute.cshtml" />
+    <Content Include="Views\Layout\Border.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layout\Column.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layout\Anchor.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

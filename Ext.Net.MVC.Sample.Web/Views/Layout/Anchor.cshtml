@@ -1,0 +1,21 @@
+﻿@{var X = Html.X();}
+
+@section content
+{
+	@(
+		X.Panel().Title("Parent View")
+			.Layout(LayoutType.Anchor)
+			.Items(
+				X.Panel().Title("30% 20%").Frame(true)
+					.AnchorHorizontal("30%")
+					.AnchorVertical("20%"),
+				X.Panel().Title("50% 50%").Frame(true)
+					.AnchorHorizontal("50%")
+					.AnchorVertical("50%"),
+				X.Panel().Title("100% 30%").Frame(true)
+					.AnchorHorizontal("100%")
+					.AnchorVertical("30%")
+					
+			)
+	)
+}

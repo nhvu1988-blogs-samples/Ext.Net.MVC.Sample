@@ -1,0 +1,26 @@
+﻿@{var X = Html.X();}
+
+@section content
+{
+	@(
+		X.Panel().Frame(true).Title("Parent View")
+			.Layout(LayoutType.Column)
+			.Items(
+				X.Panel().Frame(true)
+					.ColumnWidth(0.25)
+					.Html("<h3>Width = 0.25</h3>" +
+					      "<br>The column height can be auto adjust to fit its contents"),
+				X.Panel().Frame(true)
+					.Height(500)
+					.ColumnWidth(0.75)
+					.Html("<h3>Width = 0.75</h3>" +
+					      "<br>We can set the height to fix its height" +
+					      "<br> This column is set height to 500px"),
+				X.Panel().Frame(true)
+					.Flex(1)
+					.Width(300)
+					.Html("<h3>Width = 300px</h3>" +
+					      "<br>We also can set Flex=1 to fill this column with parent's height")
+			)
+	)
+}
