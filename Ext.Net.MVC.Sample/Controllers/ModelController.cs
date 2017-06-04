@@ -6,7 +6,7 @@ using Ext.Net.MVC.Sample.Services;
 
 namespace Ext.Net.MVC.Sample.Controllers
 {
-    public class UserController : Controller
+    public class ModelController : Controller
     {
         public ActionResult GridPanelFor()
         {
@@ -17,5 +17,10 @@ namespace Ext.Net.MVC.Sample.Controllers
 	    {
 		    return View(Mapper.Map<UserListViewModel>(UserService.GetUser(0)));
 	    }
-    }
+
+	    public ActionResult ColumnModel()
+	    {
+			return View(Mapper.Map<UserListViewModel>(UserService.GetUser(0)));
+		}
+	}
 }

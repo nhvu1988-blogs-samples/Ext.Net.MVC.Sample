@@ -189,7 +189,7 @@
     <Compile Include="App_Start\MapperConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\ModelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -218,8 +218,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\User\GridPanelFor.cshtml" />
-    <Content Include="Views\User\FormPanelFor.cshtml" />
+    <Content Include="Views\Model\GridPanelFor.cshtml" />
+    <Content Include="Views\Model\FormPanelFor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,6 +236,9 @@
       <Project>{5c242ec6-8515-4102-a609-24e662f33ed1}</Project>
       <Name>Ext.Net.MVC.Sample.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Model\ColumnModel.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

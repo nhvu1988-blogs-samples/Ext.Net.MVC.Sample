@@ -8,18 +8,21 @@ namespace Ext.Net.MVC.Sample.Services
 {
     public static class UserService
     {
-	    private static int BUILD_USER_COUNT = 100;
-		private static IList<User> _users;
+	    private const int MAX_USER_COUNT = 100;
+	    private const int MIN_USER_AGE = 1;
+	    private const int MAX_USER_AGE = 80;
+
+	    private static IList<User> _users;
 		private static IList<User> Users
 	    {
 			get
 			{
-				return _users ?? (_users = Builder<User>.CreateListOfSize(BUILD_USER_COUNT)
+				return _users ?? (_users = Builder<User>.CreateListOfSize(MAX_USER_COUNT)
 					       .All()
 						   .With(u => u.Id = Guid.NewGuid())
 					       .With(u => u.Fullname = Faker.NameFaker.Name())
 					       .With(u => u.Birthday = Faker.DateTimeFaker.BirthDay())
-					       .With(u => u.Age = Faker.NumberFaker.Number(20, 50))
+					       .With(u => u.Age = Faker.NumberFaker.Number(MIN_USER_AGE, MAX_USER_AGE))
 					       .With(u => u.IsActive = Faker.BooleanFaker.Boolean())
 					       .With(u => u.Gender = Faker.EnumFaker.SelectFrom<Gender>())
 					       .With(u => u.PhoneNumber = Faker.PhoneFaker.Phone())

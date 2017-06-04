@@ -5,20 +5,21 @@
 @section content
 {
 	@X.TabPanel().DeferredRender(false).Layout(LayoutType.Fit).Items(
-		X.Panel()
-			.Padding(10)
-			.Title("GridPanelFor")
+		X.Panel().Padding(10).Title("GridPanelFor")
 			.Loader(X.ComponentLoader()
-				.Url(Url.Action("GridPanelFor", "User"))
+				.Url(Url.Action("GridPanelFor", "Model"))
 				.Mode(LoadMode.Frame)
 				.LoadMask(lm => lm.ShowMask = true)
 			),
-
-		X.Panel()
-			.Padding(10)
-			.Title("FormPanelFor")
+		X.Panel().Padding(10).Title("FormPanelFor")
 			.Loader(X.ComponentLoader()
-				.Url(Url.Action("FormPanelFor", "User"))
+				.Url(Url.Action("FormPanelFor", "Model"))
+				.Mode(LoadMode.Frame)
+				.LoadMask(lm => lm.ShowMask = true)
+			),
+		X.Panel().Padding(10).Title("ColumnModel")
+			.Loader(X.ComponentLoader()
+				.Url(Url.Action("ColumnModel", "Model"))
 				.Mode(LoadMode.Frame)
 				.LoadMask(lm => lm.ShowMask = true)
 			)
