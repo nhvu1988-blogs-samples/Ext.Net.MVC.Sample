@@ -6,12 +6,10 @@
     <title>Ext.NET MVC Sample</title>
 </head>
 <body>
-@{
-	var X = Html.X();
-}
+@{var X = Html.X();}
 
 @X.ResourceManager()
-
+	
 @X.Viewport().Layout(LayoutType.Fit).ItemsFromSection(this, "content", true)
 
 @RenderSection("scripts", required: false)

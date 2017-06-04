@@ -1,10 +1,11 @@
 ﻿@model Ext.Net.MVC.Sample.Web.Models.UserListViewModel
 
-@{
-	var X = Html.X();
-}
+@{var X = Html.X();}
 
 @section content
 {
-	@(X.FormPanelFor(Model).DefaultAnchor("100%"))
+	@(
+		X.FormPanelFor(Model)
+			.DefaultAnchor("100%")
+	)
 }

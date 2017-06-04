@@ -4,9 +4,10 @@ using System.Linq;
 using System.Reflection;
 using AutoMapper;
 
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Ext.Net.MVC.Sample.Web.MapperConfig), "RegisterMapper")]
 namespace Ext.Net.MVC.Sample.Web
 {
-	public class MapperConfig
+	public static class MapperConfig
 	{
 		public static void RegisterMapper()
 		{

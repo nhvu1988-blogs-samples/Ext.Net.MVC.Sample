@@ -1,10 +1,11 @@
 ﻿@model IList<Ext.Net.MVC.Sample.Web.Models.UserListViewModel>
 
-@{
-	var X = Html.X();
-}
+@{var X = Html.X();}
 
 @section content
 {
-	@(X.GridPanelFor(Model))
+	@(
+		X.GridPanelFor(Model)
+			.ForceFit(true)
+	)
 }
