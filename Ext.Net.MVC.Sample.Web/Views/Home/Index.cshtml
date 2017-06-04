@@ -4,7 +4,19 @@
 
 @section content
 {
-	@X.TabPanel().BodyPadding(10).Items(
+	@X.TabPanel().Frame(true).BodyPadding(10).Items(
+		X.Panel().Title("Layout Absolute")
+			.Loader(X.ComponentLoader()
+				.Url(Url.Action("Absolute", "Layout"))
+				.Mode(LoadMode.Frame)
+				.LoadMask(lm => lm.ShowMask = true)
+			),
+		X.Panel().Title("Layout Fit")
+			.Loader(X.ComponentLoader()
+				.Url(Url.Action("Fit", "Layout"))
+				.Mode(LoadMode.Frame)
+				.LoadMask(lm => lm.ShowMask = true)
+			),
 		X.Panel().Title("GridPanelFor")
 			.Loader(X.ComponentLoader()
 				.Url(Url.Action("GridPanelFor", "Model"))
@@ -20,12 +32,6 @@
 		X.Panel().Title("ModelBind")
 			.Loader(X.ComponentLoader()
 				.Url(Url.Action("ModelBind", "Model"))
-				.Mode(LoadMode.Frame)
-				.LoadMask(lm => lm.ShowMask = true)
-			),
-		X.Panel().Title("ColumnModel")
-			.Loader(X.ComponentLoader()
-				.Url(Url.Action("ColumnModel", "Model"))
 				.Mode(LoadMode.Frame)
 				.LoadMask(lm => lm.ShowMask = true)
 			)

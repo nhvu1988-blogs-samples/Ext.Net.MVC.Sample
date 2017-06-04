@@ -189,6 +189,7 @@
     <Compile Include="App_Start\MapperConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\ModelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,7 +216,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutFit.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Model\GridPanelFor.cshtml" />
     <Content Include="Views\Model\FormPanelFor.cshtml" />
@@ -241,6 +242,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Model\ModelBind.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layout\Absolute.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Layout\Fit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutAbsolute.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

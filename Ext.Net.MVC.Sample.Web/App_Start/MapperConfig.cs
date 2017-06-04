@@ -13,8 +13,8 @@ namespace Ext.Net.MVC.Sample.Web
 		{
 			Mapper.Initialize(cfg =>
 			{
-				var allDlls = Directory.GetFiles(AppDomain.CurrentDomain.RelativeSearchPath, "Ext.Net.MVC.*.dll");
-				var dlls = allDlls.Select(Assembly.LoadFrom).ToList();
+				var allDlls = Directory.GetFiles(AppDomain.CurrentDomain.RelativeSearchPath, "Ext.Net.MVC.Sample.*.dll");
+				var dlls = allDlls.Select(Assembly.LoadFrom);
 				cfg.AddProfiles(dlls);
 			});
 		}

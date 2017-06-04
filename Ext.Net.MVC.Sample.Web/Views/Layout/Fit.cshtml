@@ -1,0 +1,16 @@
+﻿@{
+	Layout = "../Shared/_LayoutFit.cshtml";
+	var X = Html.X();
+}
+
+@section content
+{
+	@(
+		X.Panel().Title("Fit To Parent View").Frame(true).Collapsible(true)
+			.Loader(X.ComponentLoader()
+				.Url("http://www.ext.net")
+				.Mode(LoadMode.Frame)
+				.LoadMask(lm => lm.ShowMask = true)
+			)
+	)
+}
