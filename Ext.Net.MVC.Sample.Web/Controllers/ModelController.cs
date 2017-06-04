@@ -22,5 +22,10 @@ namespace Ext.Net.MVC.Sample.Web.Controllers
 	    {
 			return View(Mapper.Map<UserListViewModel>(UserService.GetUser(0)));
 		}
-	}
+
+	    public ActionResult ModelBind()
+	    {
+			return View(Mapper.Map<UserListViewModel>(UserService.GetUser(0)));
+		}
+    }
 }

@@ -16,6 +16,7 @@ namespace Ext.Net.MVC.Sample.Domain
 	public enum Gender
 	{
 		Male,
-		Female
+		Female,
+		NotDefined
 	}
 }

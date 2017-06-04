@@ -3,29 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-
+    <title>Ext.NET MVC Sample</title>
 </head>
 <body>
-	@{
-		var x = Html.X();
-	}
-	@x.ResourceManager()
-	@(x.Viewport()
-		.Layout(LayoutType.Fit)
-		.Items(vp =>
-		{
-			var content = x.Panel()
-				.ID("ContentPanel")
-				.Region(Region.Center)
-				.Layout(LayoutType.Fit)
-				.Border(false)
-				.ItemsFromSection(this, "content", true);
-			vp.Add(content);
-		})
-	)
+@{
+	var X = Html.X();
+}
 
-    @RenderSection("scripts", required: false)
+@X.ResourceManager()
+
+@X.Viewport().Layout(LayoutType.Fit).ItemsFromSection(this, "content", true)
+
+@RenderSection("scripts", required: false)
 </body>
 </html>

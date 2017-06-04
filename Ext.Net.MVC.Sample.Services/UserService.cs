@@ -21,7 +21,7 @@ namespace Ext.Net.MVC.Sample.Services
 					       .All()
 						   .With(u => u.Id = Guid.NewGuid())
 					       .With(u => u.Fullname = Faker.NameFaker.Name())
-					       .With(u => u.Birthday = Faker.DateTimeFaker.BirthDay())
+					       .With(u => u.Birthday = Faker.DateTimeFaker.BirthDay(MIN_USER_AGE, MAX_USER_AGE))
 					       .With(u => u.Age = Faker.NumberFaker.Number(MIN_USER_AGE, MAX_USER_AGE))
 					       .With(u => u.IsActive = Faker.BooleanFaker.Boolean())
 					       .With(u => u.Gender = Faker.EnumFaker.SelectFrom<Gender>())

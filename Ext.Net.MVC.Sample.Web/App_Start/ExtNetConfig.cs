@@ -1,10 +1,9 @@
 using System.Web.Mvc;
 using System.Web.Routing;
-using Ext.Net.MVC.Sample.Web;
+ 
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Ext.Net.MVC.Sample.Web.ExtNetConfig), "Start")]
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ExtNetConfig), "Start")]
-
-namespace Ext.Net.MVC.Sample.Web
+namespace Ext.Net.MVC.Sample.Web 
 {
     public static class ExtNetConfig 
     {
@@ -18,12 +17,12 @@ namespace Ext.Net.MVC.Sample.Web
             // Ignore all ext.axd embedded resource paths
             routes.IgnoreRoute("{extnet-root}/{extnet-file}/ext.axd");
 
-            // Add http://example.com/extnet/ Route
-            routes.MapRoute(
-                "ExtNet", // Route name
-                "extnet/{action}/{id}", // URL with parameters
-                new { controller = "ExtNet", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
+            //// Add http://example.com/extnet/ Route
+            //routes.MapRoute(
+            //    "ExtNet", // Route name
+            //    "extnet/{action}/{id}", // URL with parameters
+            //    new { controller = "ExtNet", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            //);
         }
 
         // If you use configure forms authentication in your Web.config and 

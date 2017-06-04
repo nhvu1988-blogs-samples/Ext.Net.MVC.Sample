@@ -1,0 +1,21 @@
+﻿@model Ext.Net.MVC.Sample.Web.Models.UserListViewModel
+
+@{
+	var X = Html.X();
+}
+
+@section content
+{
+	@(
+		X.FormPanel().DefaultAnchor("100%")
+			.Items(
+				X.DisplayFieldFor(model => model.Id),
+				X.TextFieldFor(model => model.Fullname),
+				X.NumberFieldFor(model => model.Age),
+				X.CheckboxFor(model => model.IsActive),
+				X.DateFieldFor(model => model.Birthday),
+				X.RadioGroupForEnum(model => model.Gender).FieldLabel("Gender"),
+				X.TextFieldFor(model => model.PhoneNumber)
+			)
+	)
+}

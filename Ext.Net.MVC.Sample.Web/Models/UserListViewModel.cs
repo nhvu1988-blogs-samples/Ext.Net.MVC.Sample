@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ext.Net;
+using System;
 
 namespace Ext.Net.MVC.Sample.Web.Models
 {
