@@ -3,11 +3,10 @@
 @section content
 {
 	@(
-		X.Panel().Frame(true)
-			.Title("Parent View")
+		X.Container()
 			.Layout(LayoutType.Absolute)
 			.Items(
-				X.Panel().Frame(true)
+				X.Window().Frame(true).Maximizable(true)
 					.Title("Absolute View")
 					.Width(500)
 					.Height(500)
