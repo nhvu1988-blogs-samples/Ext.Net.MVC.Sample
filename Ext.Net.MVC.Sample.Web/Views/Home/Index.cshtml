@@ -4,56 +4,54 @@
 
 @section content
 {
-	@(X.TabPanel().Frame(true).BodyPadding(10)
-		.Items(
-			X.Panel().Title("Layout Absolute")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("Absolute", "Layout"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				),
-			X.Panel().Title("Layout Fit")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("Fit", "Layout"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				),
-			X.Panel().Title("Layout Border")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("Border", "Layout"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				),
-			X.Panel().Title("Layout Column")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("Column", "Layout"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				),
-			X.Panel().Title("Layout Anchor")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("Anchor", "Layout"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				),
-			X.Panel().Title("GridPanelFor")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("GridPanelFor", "Model"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				),
-			X.Panel().Title("FormPanelFor")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("FormPanelFor", "Model"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				),
-			X.Panel().Title("ModelBind")
-				.Loader(X.ComponentLoader()
-					.Url(Url.Action("ModelBind", "Model"))
-					.Mode(LoadMode.Frame)
-					.LoadMask(lm => lm.ShowMask = true)
-				)
-			)
-	)
+	@(X.TabPanel().Frame(true).BodyPadding(10).Items(
+		  X.Panel().Title("Layout Absolute")
+			  .Loader(X.ComponentLoader()
+				  .Url(Url.Action("Absolute", "Layout"))
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  ),
+		  X.Panel().Title("Layout Fit")
+			  .Loader(X.ComponentLoader()
+				  .Url(Url.Action("Fit", "Layout"))
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  ),
+		  X.Panel().Title("Layout Border")
+			  .Loader(X.ComponentLoader()
+				  .Url(Url.Action("Border", "Layout"))
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  ),
+		  X.Panel().Title("Layout Column")
+			  .Loader(X.ComponentLoader()
+				  .Url(Url.Action("Column", "Layout"))
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  ),
+		  X.Panel().Title("Layout Anchor")
+			  .Loader(X.ComponentLoader()
+				  .Url(Url.Action("Anchor", "Layout"))
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  ),
+		  X.Panel().Title("Grid Panel")
+			  .Loader(X.ComponentLoader()
+				  .Url(Url.Action("GridPanelFor", "Model"))
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  ),
+		  X.Panel().Title("Form Controls").Layout(LayoutType.Column)
+			  .Items(
+				  X.Container().ColumnWidth(0.49).Flex(1).Loader(X.ComponentLoader()
+					  .Url(Url.Action("FormPanelFor", "Model"))
+					  .Mode(LoadMode.Frame)
+					  .LoadMask(lm => lm.ShowMask = true)),
+				  X.Container().ColumnWidth(0.51).Flex(1).Loader(X.ComponentLoader()
+					  .Url(Url.Action("ModelBind", "Model"))
+					  .Mode(LoadMode.Frame)
+					  .LoadMask(lm => lm.ShowMask = true))
+			  )
+		  ))
+	<style></style>
 }

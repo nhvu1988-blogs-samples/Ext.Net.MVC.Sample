@@ -2,23 +2,20 @@
 
 @section content
 {
-	@(
-		X.Container()
-			.Layout(LayoutType.Column)
-			.Items(
-				X.Panel().Frame(true).Title("Width = 0.25")
-					.ColumnWidth(0.25)
-					.Html("<h4>The column height can be auto adjust to fit its contents</h4>" +
-					      "<br>This column is adjusted by content's height"),
-				X.Panel().Frame(true).Title("Width = 0.75")
-					.Height(500)
-					.ColumnWidth(0.75)
-					.Html("<h4>We also can set the height to fix its height</h4>" +
-					      "<br>This column is set height to 500px"),
-				X.Panel().Frame(true).Title("Width = 300px")
-					.Flex(1)
-					.Width(300)
-					.Html("<h4>We also can set Flex=1 to fill this column with parent's height</h4>")
-			)
-	)
+	@(X.Container().Layout(LayoutType.Column).Items(
+		  X.Panel().Frame(true).Title("Width = 0.25")
+			  .ColumnWidth(0.25)
+			  .Html("<h4>The column height can be auto adjust to fit its contents</h4>" +
+			        "<br>This column is adjusted by content's height"),
+		  X.Panel().Frame(true).Title("Width = 0.75")
+			  .Height(500)
+			  .ColumnWidth(0.75)
+			  .Html("<h4>We also can set the height to fix its height</h4>" +
+			        "<br>This column is set height to 500px"),
+		  X.Panel().Frame(true).Title("Width = 300px")
+			  .Flex(1)
+			  .Width(300)
+			  .Html("<h4>We also can set Flex=1 to fill this column with parent's height</h4>")
+		  ))
+	<style></style>
 }

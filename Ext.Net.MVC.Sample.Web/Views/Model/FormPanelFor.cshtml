@@ -1,13 +1,9 @@
-﻿@model Ext.Net.MVC.Sample.Web.Models.UserListViewModel
+﻿@model Ext.Net.MVC.Sample.Web.Models.UserViewModel
 
 @{var X = Html.X();}
 
 @section content
 {
-	@(
-		X.FormPanelFor(Model)
-			.Frame(true)
-			.Padding(10)
-			.DefaultAnchor("100%")
-	)
+	@(X.FormPanelFor(Model).Title("FormPanelFor").Frame(true).Padding(10).DefaultAnchor("100%"))
+	<style></style>
 }

@@ -2,20 +2,16 @@
 
 @section content
 {
-	@(
-		X.Container()
-			.Layout(LayoutType.Anchor)
-			.Items(
-				X.Panel().Title("Width 30% - Height 20%").Frame(true)
-					.AnchorHorizontal("30%")
-					.AnchorVertical("20%"),
-				X.Panel().Title("Width 50% - Height 50%").Frame(true)
-					.AnchorHorizontal("50%")
-					.AnchorVertical("50%"),
-				X.Panel().Title("Width 100% - Height 30%").Frame(true)
-					.AnchorHorizontal("100%")
-					.AnchorVertical("30%")
-					
-			)
-	)
+	@(X.Container().Layout(LayoutType.Anchor).Items(
+		  X.Panel().Title("Width 30% - Height 20%").Frame(true)
+			  .AnchorHorizontal("30%")
+			  .AnchorVertical("20%"),
+		  X.Panel().Title("Width 50% - Height 50%").Frame(true)
+			  .AnchorHorizontal("50%")
+			  .AnchorVertical("50%"),
+		  X.Panel().Title("Width 100% - Height 30%").Frame(true)
+			  .AnchorHorizontal("100%")
+			  .AnchorVertical("30%")
+		  ))
+	<style></style>
 }

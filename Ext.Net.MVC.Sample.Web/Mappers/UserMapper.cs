@@ -8,7 +8,9 @@ namespace Ext.Net.MVC.Sample.Web.Mappers
 	{
 		public UserMapper()
 		{
-			CreateMap<User, UserListViewModel>();
+			CreateMap<User, UserViewModel>();
+			CreateMap<Company, CompanyViewModel>();
+			CreateMap<Address, AddressViewModel>();
 		}
 	}
 }

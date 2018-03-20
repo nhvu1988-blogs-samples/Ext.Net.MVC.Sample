@@ -2,18 +2,14 @@
 
 @section content
 {
-	@(
-		X.Panel().Frame(true)
-			.Title("Parent View")
-			.Layout(LayoutType.Fit)
-			.Items(
-				X.Panel().Frame(true).Collapsible(true)
-					.Title("Fit To Parent View")
-					.Loader(X.ComponentLoader()
-						.Url("http://www.ext.net")
-						.Mode(LoadMode.Frame)
-						.LoadMask(lm => lm.ShowMask = true)
-					)
-		)
-	)
+	@(X.Panel().Frame(true).Title("Parent View").Layout(LayoutType.Fit).Items(
+		  X.Panel().Frame(true).Collapsible(true)
+			  .Title("Fit To Parent View")
+			  .Loader(X.ComponentLoader()
+				  .Url("http://www.ext.net")
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  )
+		  ))
+	<style></style>
 }

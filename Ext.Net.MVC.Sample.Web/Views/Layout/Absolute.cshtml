@@ -2,21 +2,18 @@
 
 @section content
 {
-	@(
-		X.Container()
-			.Layout(LayoutType.Absolute)
-			.Items(
-				X.Window().Frame(true).Maximizable(true)
-					.Title("Absolute View")
-					.Width(500)
-					.Height(500)
-					.X(50)
-					.Y(50)
-					.Loader(X.ComponentLoader()
-						.Url("http://www.ext.net")
-						.Mode(LoadMode.Frame)
-						.LoadMask(lm => lm.ShowMask = true)
-					)
-		)
-	)
+	@(X.Container().Layout(LayoutType.Absolute).Items(
+		  X.Window().Frame(true).Maximizable(true)
+			  .Title("Absolute View")
+			  .Width(500)
+			  .Height(500)
+			  .X(50)
+			  .Y(50)
+			  .Loader(X.ComponentLoader()
+				  .Url("http://www.ext.net")
+				  .Mode(LoadMode.Frame)
+				  .LoadMask(lm => lm.ShowMask = true)
+			  )
+		  ))
+	<style></style>
 }

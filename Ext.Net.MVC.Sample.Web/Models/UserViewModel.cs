@@ -1,9 +1,10 @@
 ﻿using Ext.Net;
 using System;
+using System.Collections.Generic;
 
 namespace Ext.Net.MVC.Sample.Web.Models
 {
-	public class UserListViewModel
+	public class UserViewModel
 	{
 		[ModelField(IDProperty = true)]
 		[Column(Order = 1)]
@@ -26,6 +27,5 @@ namespace Ext.Net.MVC.Sample.Web.Models
 
 		[Column(Order = 7)]
 		public string PhoneNumber { get; set; }
-
 	}
 }

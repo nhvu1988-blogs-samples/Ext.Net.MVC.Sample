@@ -1,12 +1,46 @@
-﻿@model IList<Ext.Net.MVC.Sample.Web.Models.UserListViewModel>
+﻿@using Ext.Net.MVC.Sample.Web.Models
+
+@model IList<UserViewModel>
 
 @{var X = Html.X();}
 
+@section scripts
+{
+	<script>
+		function renderGender(value) {
+			if (value === @((int)GenderViewModel.Male))
+				return '@GenderViewModel.Male.ToString()';
+			if (value === @((int)GenderViewModel.Female))
+				return '@GenderViewModel.Female.ToString()';
+			return '';
+		}
+	</script>
+}
+
 @section content
 {
-	@(
-		X.GridPanelFor(Model)
-			.Frame(true)
-			.ForceFit(true)
-	)
+	@(X.Container().Layout(LayoutType.Column).Items(
+		  X.GridPanelFor(Model).Title("GridPanelFor")
+			  .Frame(true)
+			  .ColumnWidth(0.49)
+			  .Flex(1)
+			  .ForceFit(true),
+		  X.GridPanel().Title("Column Model")
+			  .Frame(true)
+			  .ColumnWidth(0.51)
+			  .Flex(1)
+			  .ForceFit(true)
+			  .ColumnModel(
+				  X.RowNumbererColumn().Text("#"),
+				  X.ColumnFor(Model, m => m.Id).ToBuilder<Column.Builder>().Width(100),
+				  X.ColumnFor(Model, m => m.Fullname),
+				  X.DateColumn().DataIndex(Model, m => m.Birthday).Text("Birthday").Width(80),
+				  X.NumberColumn().DataIndex(Model, m => m.Age).Text("Age").Width(40).Format("0"),
+				  X.Column().DataIndex(Model, m => m.Gender).Renderer("renderGender").Text("Gender").Width(60),
+				  X.CheckColumn().DataIndex(Model, m => m.IsActive).Text("Is Active").Width(60),
+				  X.Column().DataIndex("PhoneNumber").Text("Phone Number")
+			  )
+			  .Store(X.StoreFor(Model).DataSource(Model))
+		  ))
+	<style></style>
 }

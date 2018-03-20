@@ -17,8 +17,7 @@ namespace Ext.Net.MVC.Sample.Services
 	    {
 			get
 			{
-				return _users ?? (_users = Builder<User>.CreateListOfSize(MAX_USER_COUNT)
-					       .All()
+				return _users ?? (_users = Builder<User>.CreateListOfSize(MAX_USER_COUNT).All()
 						   .With(u => u.Id = Guid.NewGuid())
 					       .With(u => u.Fullname = Faker.NameFaker.Name())
 					       .With(u => u.Birthday = Faker.DateTimeFaker.BirthDay(MIN_USER_AGE, MAX_USER_AGE))
@@ -26,8 +25,23 @@ namespace Ext.Net.MVC.Sample.Services
 					       .With(u => u.IsActive = Faker.BooleanFaker.Boolean())
 					       .With(u => u.Gender = Faker.EnumFaker.SelectFrom<Gender>())
 					       .With(u => u.PhoneNumber = Faker.PhoneFaker.Phone())
+						   .With(u => u.Address = RandomAddress())
+						   .With(u => u.WorkingCompany = Builder<Company>.CreateNew()
+								.With(c => c.Address = RandomAddress())
+								.Build())
 						   .Build());
 			}
+	    }
+
+	    private static Address RandomAddress()
+	    {
+		    return Builder<Address>.CreateNew()
+			    .With(a => a.City = Faker.LocationFaker.City())
+				.With(a => a.Country = Faker.LocationFaker.Country())
+				.With(a => a.StreetNumber = Faker.LocationFaker.StreetNumber())
+				.With(a => a.StreetName = Faker.LocationFaker.StreetName())
+				.Build();
+
 	    }
 
 	    public static IList<User> GetAllUsers(int start = 0, int limit = 100)
